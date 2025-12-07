@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="where.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">llaollao</div>
+      <div id="menuBtn" class="hamburger">☰</div>
+
+      <div id="dropdownMenu" class="dropdown-menu">
+        <ul>
+          <li>
+            <div class="menu-item" onclick="toggleSubmenu(event)">
+              <span>Menu</span>
+              <span class="menu-arrow">▼</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="toppings.html">Toppings</a></li>
+            </ul>
+          </li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="where.html">Where</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>All Locations in Metro Manila</h1>
+      <img src="./images/Map.PNG" alt="" />
+    </div>
+    <script src="where.js"></script>
+  </body>
+</html>
