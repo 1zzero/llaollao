@@ -8,6 +8,8 @@
     src: url('./fonts/Monotype\ \ -\ VAG\ Rounded\ Next\ Bold.otf') format('truetype');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +18,11 @@
 
 body {
     background: #f9f7f0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
 }
 
 .navbar {
@@ -110,8 +117,9 @@ body {
     max-height: 500px;
     padding: 20px 25px;
 }
+
 .hero {
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,6 +141,44 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: #8ac92c 5px solid;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bodyloc {
+    height: 100%;
+}
+
+.storeplace {
+    margin-bottom: 50px;
+}
+
+.lawlawname {
+    font-family: 'Bree Reg';
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.lawlawname a {
+    font-family: 'Bree Reg';
+    color: #6b4423;
+    text-decoration: none;
+}
+
+.lawlawname a:hover {
+    text-decoration: none;
+    color: #A0C823;
+    transition: 0.4s ease-in;
+}
+
+.andress {
+    font-family: 'Bree Reg';
+    font-size: 20px;
+    color: #8b6f47;
+    line-height: 2;
 }
 
 @media (min-width: 1920px) {
