@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Bree Reg';
+    src: url('./fonts/Bree\ Regular.otf');
+}
+
+@font-face {
+    font-family: 'VAG Rounded Bold';
+    src: url('./fonts/Monotype\ \ -\ VAG\ Rounded\ Next\ Bold.otf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f7f0;
+}
+
+.navbar {
+    background: #8ac92c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'VAG Rounded Bold', serif;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    width: 200px;
+    background: white;
+    color: black;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px 0;
+    font-size: 30px;
+    font-family: 'VAG Rounded Bold', sans-serif;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 15px;
+    transition: max-height 0.3s ease;
+}
+
+.submenu.active {
+    max-height: 200px;
+}
+
+.submenu li {
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu-arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu.active {
+    max-height: 500px;
+    padding: 20px 25px;
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+}
+
+.container h1 {
+    font-family: 'VAG Rounded Bold', serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #8ac92c;
+    text-align: center;
+}
+
+.card {
+    background: #d0ceb6;
+    border-radius: 45px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 470px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+}
+
+.card img {
+    width: 120%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #a78f72;
+    line-height: 1.6;
+    letter-spacing: 0px;
+    margin: 20px 0 20px 0;
+    padding: 0 20px;
+    font-family: 'VAG Rounded Bold', serif;
+}
+
+.card button {
+    background: #8ac92c;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 21px;
+    font-family: 'VAG Rounded Bold', serif;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 25px;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.card button:hover {
+    background: #7ab625;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
