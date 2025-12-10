@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | llaollao</title>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">llaollao</a></div>
+      <div id="menuBtn" class="hamburger">☰</div>
+
+      <div id="dropdownMenu" class="dropdown-menu">
+        <ul>
+          <li>
+            <div class="menu-item" onclick="toggleSubmenu(event)">
+              <span>Menu</span>
+              <span class="menu-arrow">▼</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="toppings.html">Toppings</a></li>
+            </ul>
+          </li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="where.html">Where</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="container">
+        <h1>Frozen Yogurt</h1>
+        <div class="card">
+          <img src="./images/Frozen Yogurt.png" alt="" />
+          <p>
+            The treat everyone loves, crafted into a smooth and flavorful frozen
+            yogurt
+          </p>
+          <a href="frozenYogurt.html"><button>View More</button></a>
+        </div>
+      </div>
+      <div class="container">
+        <h1>Brand</h1>
+        <div class="card">
+          <img src="./images/Brand.png" alt="" />
+          <p>
+            Familiarize yourself with the brand's story, mission, and values
+            that set us apart.
+          </p>
+          <a href="brand.html"><button>View More</button></a>
+        </div>
+      </div>
+      <div class="container">
+        <h1>Company</h1>
+        <div class="card">
+          <img src="./images/Company.jpg" alt="" />
+          <p>
+            DIsccover the company's story, how it was created, and the creator.
+          </p>
+          <a href="company.html"><button>View More</button></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="toppings.js"></script>
+  </body>
+</html>

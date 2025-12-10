@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | llaollao</title>
+    <link rel="stylesheet" href="products.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">llaollao</a></div>
+      <div id="menuBtn" class="hamburger">☰</div>
+
+      <div id="dropdownMenu" class="dropdown-menu">
+        <ul>
+          <li>
+            <div class="menu-item" onclick="toggleSubmenu(event)">
+              <span>Menu</span>
+              <span class="menu-arrow">▼</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="toppings.html">Toppings</a></li>
+            </ul>
+          </li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="where.html">Where</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Products</h1>
+      <div class="image-container">
+        <div class="card-container">
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-front">
+              <img src="./images/Sanums-Products.jpg" alt="Sanums" />
+            </div>
+            <div class="card-face card-back">
+              <h2>SANUMS</h2>
+              <p>
+                If you are one of those people who still believes that delicious
+                means unhealthy it’s because you haven’t tried our “Sanum™”. We
+                will explain: three layers of fresh seasonal fruit + 2 crunchy
+                toppings + natural frozen yogurt + 2 sauces. It sounds good, we
+                know, but it tastes even better.
+                <br />
+                <br />
+              </p>
+              <p style="color: #73411e">
+                Choose two crunchy toppings + frozen yogurt + three fresh fruit
+                layers + two sauces.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-front">
+              <img src="./images/Glass-Products.jpg" alt="Glass" />
+            </div>
+            <div class="card-face card-back">
+              <h2>LLAOGLASS</h2>
+              <p>
+                A product in a traditional yogurt pot. Add two toppings of your
+                choice and enjoy your frozen yogurt in a unique format. (2
+                toppings). Remember that when you finish you can wash the pot
+                and continue to use it in the home.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-front">
+              <img src="./images/Tubs-Products.jpg" alt="Tubs" />
+            </div>
+            <div class="card-face card-back">
+              <h2>TUBS</h2>
+              <p>
+                At llaollao you choose everything, so you can choose to have
+                your frozen yogurt in 3 different ways.
+              </p>
+              <br />
+              <br />
+              <p style="color: #73411e">
+                Select your size – small, medium or large and enjoy it as you
+                like.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-face card-front">
+              <img src="./images/Smoothies-Products.jpg" alt="Smoothies" />
+            </div>
+            <div class="card-face card-back">
+              <h2>SMOOTHIES</h2>
+              <p>
+                You already know how good our milk shakes are, but at llaollao
+                we always want more. That’s why we are going to add something
+                extra that will help you to make a milk shake to suit your
+                style.
+              </p>
+              <br />
+              <br />
+              <p style="color: #73411e">
+                Frozen yogurt + two milk shake toppings + frozen yogurt + fruit
+                or crunchy topping + sauce.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero2">
+        <h1>Prices</h1>
+        <img src="./images/Price list-2.PNG" alt="" />
+        <br />
+        <br />
+        <img src="./images/Price list-1 .PNG" alt="" />
+      </div>
+    </div>
+
+    <script src="products.js"></script>
+  </body>
+</html>

@@ -1,0 +1,750 @@
+@font-face {
+    font-family: 'Bree Reg';
+    src: url('./fonts/Bree\ Regular.otf');
+}
+
+@font-face {
+    font-family: 'VAG Rounded Bold';
+    src: url('./fonts/Monotype\ \ -\ VAG\ Rounded\ Next\ Bold.otf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f7f0;
+}
+
+.navbar {
+    background: #8ac92c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'VAG Rounded Bold', serif;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    width: 200px;
+    background: white;
+    color: black;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px 0;
+    font-size: 30px;
+    font-family: 'VAG Rounded Bold', sans-serif;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 15px;
+    transition: max-height 0.3s ease;
+}
+
+.submenu.active {
+    max-height: 200px;
+}
+
+.submenu li {
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu-arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu.active {
+    max-height: 500px;
+    padding: 20px 25px;
+}
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.firstPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 50px;
+}
+
+.secondPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 50px;
+}
+
+.firstPart img {
+    width: 420px;
+    height: 500px;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: 20% center;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.secondPart img {
+    width: 420px;
+    height: 500px;
+    border-radius: 50px;
+    object-fit: cover;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.rightText {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 50%;
+}
+
+.rightText h1 {
+    font-size: 60px;
+    font-family: 'VAG Rounded Bold', serif;
+    margin-bottom: 20px;
+    color: #8ac92c;
+}
+
+.rightText p {
+    font-size: 20px;
+    font-family: 'VAG Rounded Bold', serif;
+    color: #a78f72;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.leftText {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 50%;
+}
+
+.leftText h1 {
+    font-size: 60px;
+    font-family: 'VAG Rounded Bold', serif;
+    margin-bottom: 20px;
+    color: #8ac92c;
+}
+
+.leftText p {
+    font-size: 20px;
+    font-family: 'VAG Rounded Bold', serif;
+    color: #a78f72;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.hero span {
+    color: #784928;
+}
+
+/* Ultra Wide Screens (2560px+) */
+@media (min-width: 2560px) {
+    .navbar {
+        padding: 20px 40px;
+    }
+    
+    .logo {
+        font-size: 65px;
+    }
+    
+    .hamburger {
+        font-size: 65px;
+    }
+    
+    .dropdown-menu {
+        width: 280px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 40px;
+    }
+    
+    .submenu li {
+        font-size: 32px;
+    }
+    
+    .hero {
+        padding: 60px 40px;
+    }
+    
+    .firstPart, .secondPart {
+        width: 70%;
+        gap: 70px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 550px;
+        height: 650px;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 85px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 28px;
+    }
+}
+
+/* Large Desktop (1920px - 2559px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    .logo {
+        font-size: 55px;
+    }
+    
+    .hamburger {
+        font-size: 55px;
+    }
+    
+    .dropdown-menu {
+        width: 240px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 35px;
+    }
+    
+    .submenu li {
+        font-size: 28px;
+    }
+    
+    .firstPart, .secondPart {
+        gap: 60px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 480px;
+        height: 580px;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 75px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 24px;
+    }
+}
+
+/* Standard Desktop (1440px - 1919px) */
+@media (max-width: 1919px) and (min-width: 1440px) {
+    .firstPart, .secondPart {
+        width: 80%;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 400px;
+        height: 480px;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 55px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 19px;
+    }
+}
+
+/* Medium Desktop (1200px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .logo {
+        font-size: 45px;
+    }
+    
+    .hamburger {
+        font-size: 45px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 28px;
+    }
+    
+    .submenu li {
+        font-size: 22px;
+    }
+    
+    .firstPart, .secondPart {
+        width: 85%;
+        gap: 40px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 360px;
+        height: 440px;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 50px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 18px;
+    }
+}
+
+/* Small Desktop/Large Tablet (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .logo {
+        font-size: 42px;
+    }
+    
+    .hamburger {
+        font-size: 42px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 26px;
+    }
+    
+    .submenu li {
+        font-size: 20px;
+    }
+    
+    .hero {
+        padding: 35px 20px;
+    }
+    
+    .firstPart, .secondPart {
+        width: 90%;
+        gap: 35px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 320px;
+        height: 400px;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 45px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 17px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .logo {
+        font-size: 40px;
+    }
+    
+    .hamburger {
+        font-size: 40px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 26px;
+    }
+    
+    .submenu li {
+        font-size: 20px;
+    }
+    
+    .hero {
+        padding: 30px 20px;
+    }
+    
+    .firstPart, .secondPart {
+        flex-direction: column;
+        width: 85%;
+        gap: 30px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 100%;
+        max-width: 450px;
+        height: 380px;
+    }
+    
+    .rightText, .leftText {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 42px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 18px;
+    }
+}
+
+/* Large Mobile/Small Tablet (600px - 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
+    .logo {
+        font-size: 35px;
+    }
+    
+    .hamburger {
+        font-size: 35px;
+    }
+    
+    .dropdown-menu {
+        width: 190px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 24px;
+    }
+    
+    .submenu li {
+        font-size: 19px;
+    }
+    
+    .hero {
+        padding: 30px 15px;
+    }
+    
+    .firstPart, .secondPart {
+        flex-direction: column;
+        width: 90%;
+        gap: 25px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 100%;
+        max-width: 400px;
+        height: 340px;
+    }
+    
+    .rightText, .leftText {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 38px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 17px;
+    }
+}
+
+/* Mobile (480px - 599px) */
+@media (max-width: 599px) and (min-width: 480px) {
+    .navbar {
+        padding: 12px 18px;
+    }
+    
+    .logo {
+        font-size: 32px;
+    }
+    
+    .hamburger {
+        font-size: 32px;
+    }
+    
+    .dropdown-menu {
+        width: 180px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 22px;
+    }
+    
+    .submenu li {
+        font-size: 18px;
+    }
+    
+    .hero {
+        padding: 25px 15px;
+    }
+    
+    .firstPart, .secondPart {
+        flex-direction: column;
+        width: 95%;
+        gap: 20px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
+    }
+    
+    .rightText, .leftText {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile (375px - 479px) */
+@media (max-width: 479px) and (min-width: 375px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+    
+    .logo {
+        font-size: 28px;
+    }
+    
+    .hamburger {
+        font-size: 28px;
+    }
+    
+    .dropdown-menu {
+        width: 170px;
+        padding: 0 20px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 20px;
+    }
+    
+    .submenu li {
+        font-size: 17px;
+    }
+    
+    .hero {
+        padding: 20px 12px;
+    }
+    
+    .firstPart, .secondPart {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 100%;
+        max-width: 320px;
+        height: 280px;
+        border-radius: 35px;
+    }
+    
+    .rightText, .leftText {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Extra Small Mobile (320px - 374px) */
+@media (max-width: 374px) and (min-width: 320px) {
+    .navbar {
+        padding: 10px 12px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .hamburger {
+        font-size: 24px;
+    }
+    
+    .dropdown-menu {
+        width: 160px;
+        padding: 0 15px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+    
+    .submenu li {
+        font-size: 15px;
+    }
+    
+    .hero {
+        padding: 20px 10px;
+    }
+    
+    .firstPart, .secondPart {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 100%;
+        max-width: 280px;
+        height: 250px;
+        border-radius: 30px;
+    }
+    
+    .rightText, .leftText {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+}
+
+/* Tiny Screens (below 320px) */
+@media (max-width: 319px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .hamburger {
+        font-size: 20px;
+    }
+    
+    .dropdown-menu {
+        width: 140px;
+        padding: 0 12px;
+    }
+    
+    .dropdown-menu ul li {
+        font-size: 16px;
+        padding: 6px 0;
+    }
+    
+    .submenu li {
+        font-size: 13px;
+    }
+    
+    .hero {
+        padding: 15px 8px;
+    }
+    
+    .firstPart, .secondPart {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    
+    .firstPart img, .secondPart img {
+        width: 100%;
+        max-width: 240px;
+        height: 220px;
+        border-radius: 25px;
+    }
+    
+    .rightText, .leftText {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .rightText h1, .leftText h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    
+    .rightText p, .leftText p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+}

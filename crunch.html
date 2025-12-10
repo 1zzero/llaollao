@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crunch | llaollao</title>
+    <link rel="stylesheet" href="crunch.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">llaollao</a></div>
+      <div id="menuBtn" class="hamburger">☰</div>
+
+      <div id="dropdownMenu" class="dropdown-menu">
+        <ul>
+          <li>
+            <div class="menu-item" onclick="toggleSubmenu(event)">
+              <span>Menu</span>
+              <span class="menu-arrow">▼</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="toppings.html">Toppings</a></li>
+            </ul>
+          </li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="where.html">Where</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Crunch</h1>
+      <div class="image-container">
+        <div class="card">
+          <img src="./images/almond.jpg" alt="Toppings" />
+          <h2>Almond</h2>
+        </div>
+        <div class="card">
+          <img src="./images/chipsahoy.png" alt="" />
+          <h2>Chips Ahoy!</h2>
+        </div>
+        <div class="card">
+          <img src="./images/muesli.jpg" alt="" />
+          <h2>Muesli</h2>
+      </div>
+      <div class="card">
+          <img src="./images/lotus.jpg" alt="" />
+          <h2>Lotus Caramelised Biscuit</h2>
+      </div>
+      <div class="card">
+          <img src="./images/biscuit.jpg" alt="" />
+          <h2>Conguitos Biscuit</h2>
+      </div>
+      <div class="card">
+          <img src="./images/lacasitos.jpg" alt="" />
+          <h2>Lacasitos</h2>
+      </div>
+      <div class="card">
+          <img src="./images/walnuts.jpg" alt="" />
+          <h2>Walnuts</h2>
+      </div>
+      <div class="card">
+          <img src="./images/conguitos.jpg" alt="" />
+          <h2>Conguitos</h2>
+      </div>
+    </div>
+
+    <script src="crunch.js"></script>
+  </body>
+</html>

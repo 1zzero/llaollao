@@ -1,0 +1,439 @@
+@font-face {
+    font-family: 'Bree Reg';
+    src: url('./fonts/Bree\ Regular.otf');
+}
+
+@font-face {
+    font-family: 'VAG Rounded Bold';
+    src: url('./fonts/Monotype\ \ -\ VAG\ Rounded\ Next\ Bold.otf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f7f0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    background: #8ac92c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'VAG Rounded Bold', serif;
+}
+
+.hamburger {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    width: 200px;
+    background: white;
+    color: black;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px 0;
+    font-size: 30px;
+    font-family: 'VAG Rounded Bold', sans-serif;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 15px;
+    transition: max-height 0.3s ease;
+}
+
+.submenu.active {
+    max-height: 200px;
+}
+
+.submenu li {
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu-arrow.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu.active {
+    max-height: 500px;
+    padding: 20px 25px;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+    font-family: 'VAG Rounded Bold', serif;
+    color: #8ac92c;
+}
+
+.hero img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: #8ac92c 5px solid;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bodyloc {
+    height: 100%;
+}
+
+.storeplace {
+    margin-bottom: 50px;
+}
+
+.lawlawname {
+    font-family: 'Bree Reg';
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.lawlawname a {
+    font-family: 'Bree Reg';
+    color: #6b4423;
+    text-decoration: none;
+}
+
+.lawlawname a:hover {
+    text-decoration: none;
+    color: #A0C823;
+    transition: 0.4s ease-in;
+}
+
+.andress {
+    font-family: 'Bree Reg';
+    font-size: 20px;
+    color: #8b6f47;
+    line-height: 2;
+}
+
+@media (min-width: 1920px) {
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .card img {
+        max-width: 700px;
+        height: 500px;
+    }
+
+    .card h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1919px) and (min-width: 1440px) {
+    .card img {
+        max-width: 550px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .card img {
+        max-width: 450px;
+        height: 320px;
+    }
+
+    .card h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .image-container {
+        gap: 15px;
+    }
+
+    .card img {
+        max-width: 350px;
+        height: 280px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .logo {
+        font-size: 40px;
+    }
+
+    .hamburger {
+        font-size: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+
+    .image-container {
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .card img {
+        max-width: 280px;
+        height: 220px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 600px) {
+    .logo {
+        font-size: 35px;
+    }
+
+    .hamburger {
+        font-size: 35px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card img {
+        max-width: 500px;
+        height: 300px;
+    }
+
+    .card h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 599px) and (min-width: 480px) {
+    .logo {
+        font-size: 32px;
+    }
+
+    .hamburger {
+        font-size: 32px;
+    }
+
+    .dropdown-menu ul li {
+        font-size: 26px;
+    }
+
+    .submenu li {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .card img {
+        max-width: 420px;
+        height: 260px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 479px) and (min-width: 375px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .hamburger {
+        font-size: 28px;
+    }
+
+    .dropdown-menu {
+        width: 180px;
+        padding: 0 20px;
+    }
+
+    .dropdown-menu ul li {
+        font-size: 24px;
+    }
+
+    .submenu li {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding-top: 25px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        margin-bottom: 18px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card img {
+        max-width: 340px;
+        height: 220px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 374px) {
+    .navbar {
+        padding: 10px 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hamburger {
+        font-size: 24px;
+    }
+
+    .dropdown-menu {
+        width: 160px;
+        padding: 0 15px;
+    }
+
+    .dropdown-menu ul li {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    .submenu li {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding-top: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .card img {
+        max-width: 280px;
+        height: 180px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+}
